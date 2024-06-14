@@ -24,15 +24,17 @@
     <script src="https://wellhub3-dev-ed.develop.lightning.force.com/lightning/lightning.out.js"></script>
 
     <script>
-        $Lightning.use("runtime_appointmentbooking:lightningOutGuest", function () {
-            $Lightning.createComponent(
-                "lightning:flow", 
-                {}, 
-                "lexcontainer", 
-                function (component) {
-                    component.startFlow("Salesforce_Scheduler_Unauthenticated");
-                }
-            );
-        }, 'https://wellhub3-dev-ed.develop.my.site.com/scheduler');
+        $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
+            function() {                  // Callback once framework and app load
+                $Lightning.createComponent(
+                    "lightning:flow",    // top-level component of your app
+                    { },    // attributes to set on the component when created
+                    "lexcontainer",    // the DOM location to insert the component
+                    function(component) {            // API name of the Flow
+                        component.startFlow("Salesforce_Scheduler_Unauthenticated");
+                    }
+                );
+            },    'https://wellhub3-dev-ed.develop.my.site.com/scheduler'  // Site endpoint
+        );
     </script>
 </html>
