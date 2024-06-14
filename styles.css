@@ -54,4 +54,5 @@ main {
 #lexcontainer {
     max-height: 477px;
     overflow: auto;
+    max-height: 480px;
 }
