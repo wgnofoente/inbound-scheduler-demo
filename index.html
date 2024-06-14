@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Wellhub Salesforce Scheduler Demo</title>
+
+        <style>
+            .slds-visual-picker_vertical .slds-visual-picker__figure {
+                height: inherit !important;
+            }
+    
+            .runtime_appointmentbookingFlowLocation .slds-visual-picker_vertical {
+                display: inline-flex !important;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Wellhub Salesforce Scheduler</h1>
+
+        <div id="lexcontainer">
+            <p>Invoke the Lightning Component specified in the Script.</p>
+        </div>
+    </body>
+
+    <script src="https://wellhub3-dev-ed.develop.lightning.force.com/lightning/lightning.out.js"></script>
+
+    <script>
+        $Lightning.use("runtime_appointmentbooking:lightningOutGuest", function () {
+            $Lightning.createComponent(
+                "lightning:flow", 
+                {}, 
+                "lexcontainer", 
+                function (component) {
+                    component.startFlow("Salesforce_Scheduler_Unauthenticated");
+                }
+            );
+        }, 'https://wellhub3-dev-ed.develop.my.site.com/scheduler');
+    </script>
+</html>
