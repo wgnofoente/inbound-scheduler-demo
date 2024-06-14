@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'NaN Holo Condensed';
+    src: url('./fonts/NaNHoloCondensed-Bold.woff2') format('woff2'),
+        url('./fonts/NaNHoloCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color: rgb(251, 248, 236); 
+    font-family: "NaN Holo Condensed";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95vh;
+}
+
+header {
+    display: flex;
+    height: 26px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 43px;
+}
+
+.header__help {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+}
+
+.header__help a {
+    color: black
+}
+
+main {
+    margin: 0 100px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.title {
+    font-size: 64px;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 20px;
+}
